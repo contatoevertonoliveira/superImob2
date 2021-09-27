@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cliente_pjs",
+  "info": {
+    "name": "clientePJ",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "numInscricao": {
+      "type": "biginteger",
+      "required": true,
+      "unique": true
+    },
+    "dtAbertura": {
+      "type": "date",
+      "required": true
+    },
+    "nomeEmpresa": {
+      "type": "string",
+      "required": true
+    },
+    "nomeFantasia": {
+      "type": "string",
+      "required": true
+    },
+    "porteEmpresa": {
+      "type": "enumeration",
+      "enum": [
+        "MEI",
+        "ME",
+        "LTDA",
+        "EIRELI",
+        "SA"
+      ]
+    },
+    "atividadePrincipal": {
+      "type": "string"
+    },
+    "naturezaJuridica": {
+      "type": "string"
+    },
+    "endEmpresa": {
+      "type": "string"
+    },
+    "cepEmpresa": {
+      "type": "biginteger"
+    },
+    "bairroEmpresa": {
+      "type": "string"
+    },
+    "munEmpresa": {
+      "type": "string"
+    }
+  }
+}

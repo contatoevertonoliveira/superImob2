@@ -1,0 +1,115 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clientes",
+  "info": {
+    "name": "clientePF",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nomeCompleto": {
+      "type": "string",
+      "required": true
+    },
+    "nacCliente": {
+      "type": "string"
+    },
+    "profCliente": {
+      "type": "string"
+    },
+    "estCivilCliente": {
+      "type": "enumeration",
+      "enum": [
+        "Solteiro",
+        "Casado",
+        "Divorciado",
+        "Viuvo",
+        "Outros"
+      ]
+    },
+    "endCliente": {
+      "type": "string"
+    },
+    "bairroCliente": {
+      "type": "string"
+    },
+    "cidadeCliente": {
+      "type": "string"
+    },
+    "ufCliente": {
+      "type": "enumeration",
+      "enum": [
+        "AC_Acre",
+        "AL_Alagoas",
+        "AP_Amapa",
+        "AM_Amazonas",
+        "BA_Bahia",
+        "CE_Ceara",
+        "DF_Distrito_Federal",
+        "ES_Espirito_Santo",
+        "GO_Goias",
+        "MA_Maranhao",
+        "MT_Mato_Grosso",
+        "MS_Mato_Grosso_Sul",
+        "MG_Minas_Gerais",
+        "PA_Para",
+        "PB_Paraiba",
+        "PR_Parana",
+        "PE_Pernambuco",
+        "PI_Piaui",
+        "RJ_Rio_de_Janeiro",
+        "RN_Rio_Grande_Norte",
+        "RS_Rio_Grande_Sul",
+        "RO_Rondonia",
+        "RR_Roraima",
+        "SC_Santa_Catarina",
+        "SP_Sao_Paulo",
+        "SE_Sergipe",
+        "TO_Tocantis"
+      ]
+    },
+    "cepCliente": {
+      "type": "biginteger"
+    },
+    "foneRes": {
+      "type": "biginteger"
+    },
+    "foneCel": {
+      "type": "biginteger"
+    },
+    "rgCliente": {
+      "type": "biginteger"
+    },
+    "cpfCliente": {
+      "type": "biginteger",
+      "unique": true,
+      "required": true
+    },
+    "email": {
+      "type": "email"
+    },
+    "site": {
+      "type": "string"
+    },
+    "nomeConjuge": {
+      "type": "string"
+    },
+    "nacConjuge": {
+      "type": "string"
+    },
+    "profConjuge": {
+      "type": "string"
+    },
+    "rgConjuge": {
+      "type": "biginteger"
+    },
+    "cpfConjuge": {
+      "type": "biginteger"
+    }
+  }
+}
