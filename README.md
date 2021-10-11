@@ -1,2 +1,2 @@
-# criptoBot2
-Multicoin, cripto for Binance
+# SuperImob 1.0
+Sistema Imobiliario com ReactJS e Strapi
