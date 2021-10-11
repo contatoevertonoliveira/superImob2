@@ -4,15 +4,19 @@ import './styles.scss';
 function Button(props){
 
   const links = [props.text]
-  const [active, setActive] = useState(links[0]);
+  const [activeClass, setActiveClass] = useState("linkButton");
+
 
   return(
     <React.Fragment>
       {links.map(text => (
         <button
-          className='linkButton'
+          className={activeClass}
           key={text}
-          onClick={()=>setActive(text)}>
+          type="submit"
+          onClick={props.handleClick}
+          active={text ? true : false}
+          >
           {props.icon}
           {text}
         </button>

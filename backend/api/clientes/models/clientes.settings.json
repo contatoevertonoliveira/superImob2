@@ -79,7 +79,7 @@
     "foneRes": {
       "type": "biginteger"
     },
-    "foneCel": {
+    "foneCel1": {
       "type": "biginteger"
     },
     "rgCliente": {
@@ -109,6 +109,22 @@
       "type": "biginteger"
     },
     "cpfConjuge": {
+      "type": "biginteger"
+    },
+    "dataNasc": {
+      "type": "date",
+      "required": true
+    },
+    "sexo": {
+      "type": "enumeration",
+      "enum": [
+        "Masculino",
+        "Feminino",
+        "Transgenero"
+      ],
+      "required": true
+    },
+    "foneCel2": {
       "type": "biginteger"
     }
   }
