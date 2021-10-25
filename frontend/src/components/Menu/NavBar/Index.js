@@ -1,13 +1,15 @@
 import React from 'react';
 import ItemMenu from '../ItemMenu/Index';
-
-import './styles.scss';
+import './style.scss';
 
 function NavBar(){
   
   return(
     <React.Fragment>
-      <ItemMenu />
+      <nav>
+        <header><h5>superImob 1.0</h5></header>
+        <ItemMenu />
+      </nav>
     </React.Fragment>    
   );
 }

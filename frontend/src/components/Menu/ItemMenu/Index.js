@@ -3,18 +3,16 @@ import { useHistory } from 'react-router-dom';
 import Button from '../../Button/Index';
 import { FaAddressCard, FaFileSignature, FaFileInvoiceDollar, FaTools, FaDoorOpen, FaFileImage } from "react-icons/fa";
 
-import './style.scss';
-
 function ItemMenu(){
 
   const history = useHistory();
 
-  const iconDashboard = <FaFileImage style={{"margin-right":"5px"}}/>;
-  const iconClientes = <FaAddressCard style={{"margin-right":"5px"}}/>;
-  const iconContratos = <FaFileSignature style={{"margin-right":"5px"}}/>;
-  const iconContas = <FaFileInvoiceDollar style={{"margin-right":"5px"}}/>;
-  const iconConfig = <FaTools style={{"margin-right":"5px"}}/>;
-  const iconSair = <FaDoorOpen style={{"margin-right":"5px"}}/>;
+  const iconDashboard = <FaFileImage style={{"marginRight":"5px"}}/>;
+  const iconClientes = <FaAddressCard style={{"marginRight":"5px"}}/>;
+  const iconContratos = <FaFileSignature style={{"marginRight":"5px"}}/>;
+  const iconContas = <FaFileInvoiceDollar style={{"marginRight":"5px"}}/>;
+  const iconConfig = <FaTools style={{"marginRight":"5px"}}/>;
+  const iconSair = <FaDoorOpen style={{"marginRight":"5px"}}/>;
 
   function cleanAndRedirect(){
     localStorage.removeItem('jwToken');
@@ -51,8 +49,6 @@ function ItemMenu(){
 
   return(
     <React.Fragment>
-      <div className="sidebar">
-        <div className="header">superImob 1.0</div>
 
           <Button icon={iconDashboard} text="Dashboard" handleClick={handleClick} />
           <Button icon={iconClientes} text="Clientes" handleClick={handleClick} />
@@ -61,7 +57,6 @@ function ItemMenu(){
           <Button icon={iconConfig} text="Config" handleClick={handleClick} />
           <Button icon={iconSair} text="Sair" handleClick={handleClick} />
 
-      </div>
     </React.Fragment>    
   );
 }

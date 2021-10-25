@@ -79,6 +79,7 @@ export const createClient =
         type: RETRIEVE_CLIENT,
         payload: res.data,
       });
+
     } catch (err){
       console.log(err);
     }

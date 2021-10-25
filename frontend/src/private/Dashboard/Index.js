@@ -1,12 +1,16 @@
-import React from 'react';
+import React from "react";
 import Menu from '../../components/Menu/Index';
-import CardGreen from '../../components/Cards/CardGreen';
-import CardRed from '../../components/Cards/CardRed';
 import CardSilver from '../../components/Cards/CardSilver';
 import Header from '../../components/Header/Index';
+import getContent from '../../services/getApi';
 
 function Dashboard(){
-  return(
+
+  const countClient = getContent().data;
+
+  console.log(countClient);
+
+    return(
     <React.Fragment>
       <Menu />
 
@@ -15,15 +19,15 @@ function Dashboard(){
         
         <div className="row">
           <div className="col-sm">
-            <CardSilver cab="Clientes" info="Quantidade" text="0" />
+            <CardSilver cab="Clientes" info="Quantidade" text={countClient} />
           </div>
 
           <div className="col-sm">
-            <CardGreen cab="Contratos Ativos" info="Quantidade" text="0" />
+            <CardSilver cab="Contratos Ativos" info="Quantidade" text="0" />
           </div>
 
           <div className="col-sm">
-            <CardGreen cab="Aluguéres | Mês" info="Quantidade" text="0" />
+            <CardSilver cab="Aluguéres | Mês" info="Quantidade" text="0" />
           </div>
 
         </div>
@@ -32,15 +36,15 @@ function Dashboard(){
 
         <div className="row">
           <div className="col-sm">
-            <CardRed cab="Aluguéres | Vencidos" info="Quantidade" text="0" />
+            <CardSilver cab="Aluguéres | Vencidos" info="Quantidade" text="0" />
           </div>
 
           <div className="col-sm">
-            <CardGreen cab="Prestações" info="Quantidade" text="0" />
+            <CardSilver cab="Prestações" info="Quantidade" text="0" />
           </div>
 
           <div className="col-sm">
-            <CardGreen cab="Aluguéis | Mês" info="à Receber" text="0" />
+            <CardSilver cab="Aluguéis | Mês" info="à Receber" text="0" />
           </div>
 
         </div>

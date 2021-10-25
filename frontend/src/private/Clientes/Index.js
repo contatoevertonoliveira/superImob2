@@ -58,7 +58,7 @@ function Clientes(){
                       <div className="input-group">
                         <span className="input-group-text">
                         <svg className="icon icon-xs" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
+                          <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd"></path>
                         </svg>
                         </span>
                         <input data-datepicker="" className="form-control" id="datanasc" type="text" placeholder="dd/mm/yyyy" required />                                               
@@ -91,76 +91,76 @@ function Clientes(){
                     <input className="form-control" id="profcliente" type="text" placeholder="profissão" required />
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-md-6 mb-3">
-                    <div class="form-group">
+                <div className="row">
+                  <div className="col-md-6 mb-3">
+                    <div className="form-group">
                         <label for="email">Email:</label>
-                        <input class="form-control" id="email" type="email" placeholder="nome@site.com.br" required />
+                        <input className="form-control" id="email" type="email" placeholder="nome@site.com.br" required />
                     </div>
                   </div>
-                  <div class="col-md-6 mb-3">
-                    <div class="form-group">
+                  <div className="col-md-6 mb-3">
+                    <div className="form-group">
                         <label for="foneres">Fone:</label>
-                        <input class="form-control" id="foneres" type="number" placeholder="+55-11 00000 0000" />
+                        <input className="form-control" id="foneres" type="number" placeholder="+55-11 00000 0000" />
                     </div>
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="col-md-6 mb-3">
-                    <div class="form-group">
+                <div className="row">
+                  <div className="col-md-6 mb-3">
+                    <div className="form-group">
                         <label for="rg">RG (Registro Geral):</label>
-                        <input class="form-control" id="rg" type="number" placeholder="00.000.000-0" required />
+                        <input className="form-control" id="rg" type="number" placeholder="00.000.000-0" required />
                     </div>
                   </div>
-                  <div class="col-md-6 mb-3">
-                    <div class="form-group">
+                  <div className="col-md-6 mb-3">
+                    <div className="form-group">
                         <label for="cpf">CPF (Cadastro de Pessoa Física):</label>
-                        <input class="form-control" id="cpf" type="number" placeholder="000.000.000-00" />
+                        <input className="form-control" id="cpf" type="number" placeholder="000.000.000-00" />
                     </div>
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="col-md-6 mb-3">
-                    <div class="form-group">
+                <div className="row">
+                  <div className="col-md-6 mb-3">
+                    <div className="form-group">
                         <label for="fonecel1">Celular 1:</label>
-                        <input class="form-control" id="fonecel1" type="number" placeholder="+55-11 00000 0000" required />
+                        <input className="form-control" id="fonecel1" type="number" placeholder="+55-11 00000 0000" required />
                     </div>
                   </div>
-                  <div class="col-md-6 mb-3">
-                    <div class="form-group">
+                  <div className="col-md-6 mb-3">
+                    <div className="form-group">
                         <label for="fonecel2">Celular 2:</label>
-                        <input class="form-control" id="fonecel2" type="number" placeholder="+55-11 00000 0000" />
+                        <input className="form-control" id="fonecel2" type="number" placeholder="+55-11 00000 0000" />
                     </div>
                   </div>
                 </div>
                 
-                <h2 class="h5 my-4">Localização:</h2>
-                <div class="row">
-                  <div class="col-sm-8 mb-3">
-                    <div class="form-group">
+                <h2 className="h5 my-4">Localização:</h2>
+                <div className="row">
+                  <div className="col-sm-8 mb-3">
+                    <div className="form-group">
                       <label for="endcliente">Endereço:</label>
-                      <input class="form-control" id="endcliente" type="text" placeholder="endereço" required />
+                      <input className="form-control" id="endcliente" type="text" placeholder="endereço" required />
                     </div>
                   </div>
-                  <div class="col-sm-4 mb-3">
-                    <div class="form-group">
+                  <div className="col-sm-4 mb-3">
+                    <div className="form-group">
                       <label for="bairrocliente">Bairro:</label>
-                      <input class="form-control" id="bairrocliente" type="text" placeholder="bairro" required />
+                      <input className="form-control" id="bairrocliente" type="text" placeholder="bairro" required />
                     </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-sm-4 mb-3">
-                    <div class="form-group">
+                <div className="row">
+                  <div className="col-sm-4 mb-3">
+                    <div className="form-group">
                       <label for="cidadecliente">Município:</label>
-                      <input class="form-control" id="cidadecliente" type="text" placeholder="Municipio" required />
+                      <input className="form-control" id="cidadecliente" type="text" placeholder="Municipio" required />
                     </div>
                   </div>
-                  <div class="col-sm-4 mb-3">
+                  <div className="col-sm-4 mb-3">
                     <label for="ufcliente">Uf:</label>
-                    <select class="form-select w-100 mb-0" id="ufcliente" name="ufcliente" aria-label="State">
+                    <select className="form-select w-100 mb-0" id="ufcliente" name="ufcliente" aria-label="State">
                       <option selected>Uf</option>
                       <option value="AC">Acre</option>
                       <option value="AL">Alagoas</option>
@@ -199,7 +199,7 @@ function Clientes(){
                   </div>
                 </div>
 
-                <div clclassNamess="row">
+                <div clclassNames="row">
                   <div className="card-body pb-5"> 
                     <button className="btn btn-success me-2">
                       <svg className="icon icon-xs" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -208,7 +208,7 @@ function Clientes(){
                         <span style={{"padding":"5px"}}>Salvar Cliente</span>
                     </button>
                     <button className="btn btn-danger">
-                      <svg class="icon icon-xs" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <svg className="icon icon-xs" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fillRule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd"></path>
                       </svg>
                       <span style={{"padding":"5px"}}>Excluir Cliente</span>

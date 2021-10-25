@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 import Menu from '../../components/Menu/Index';
 import Header from '../../components/Header/Index';
 import { retrieveClient, deleteClient } from "./actions";
@@ -92,12 +91,15 @@ class ClientList extends Component {
                       </tr>
                       )
                   )}
+                 
               </tbody>
             </table>
+            
         </div>
         </div>
       </div>
       </main>
+                  
       </React.Fragment>
      );
   }
