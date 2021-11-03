@@ -2,7 +2,7 @@ import React from 'react';
 import Menu from '../../components/Menu/Index';
 import Header from '../../components/Header/Index';
 
-function Conf(){
+function Config(){
   return(
     <React.Fragment>
       <Menu />
@@ -20,4 +20,4 @@ function Conf(){
   )
 }
 
-export default Conf;
+export default Config;

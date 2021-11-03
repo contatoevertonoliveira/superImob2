@@ -1,13 +1,12 @@
 import React from 'react';
 import { Route, BrowserRouter, Redirect } from 'react-router-dom';
-import { Provider } from "react-redux";
 import Login from './public/Login/Index';
 import Dashboard from './private/Dashboard/Index';
-import ClientList from './private/Clientes/clientList';
+import ListClient from './private/Clientes/ListClient';
+import Imoveis from './private/Imoveis/Index';
 import Contratos from './private/Contratos/Index';
 import Contas from './private/Contas/Index';
-import Conf from './private/Conf/Index';
-import store from './store';
+import Config from './private/Config/Index';
 
 function Routes(){
 
@@ -31,9 +30,10 @@ function Routes(){
         <Dashboard />
       </PrivateRoute>
       <PrivateRoute path="/clientes">
-        <Provider store={store}>
-          <ClientList />
-        </Provider>
+        <ListClient />
+      </PrivateRoute>
+      <PrivateRoute path="/imoveis">
+        <Imoveis />
       </PrivateRoute>
       <PrivateRoute path="/contratos">
         <Contratos />
@@ -41,8 +41,8 @@ function Routes(){
       <PrivateRoute path="/contas">
         <Contas />
       </PrivateRoute>
-      <PrivateRoute path="/conf">
-        <Conf />
+      <PrivateRoute path="/config">
+        <Config />
       </PrivateRoute>
     </BrowserRouter>
   )

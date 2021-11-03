@@ -1,9 +1,11 @@
 import React from 'react';
-import NavBar from './NavBar/Index';
+import NavBar from './NavBar';
+import SideBar from './SideBar';
 
 function Menu() {
     return (<React.Fragment>
         <NavBar />
+        <SideBar />
     </React.Fragment>)
 }
 

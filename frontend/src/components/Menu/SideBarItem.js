@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-function ItemMenu(props){
+function SideBarItem(props){
 
   function getClassName(itemName){
     return window.location.pathname === itemName ? 'nav-item active' : 'nav-item';
@@ -19,4 +19,4 @@ function ItemMenu(props){
   )
 }
 
-export default ItemMenu;
+export default SideBarItem;

@@ -4,9 +4,12 @@ function Header(props){
 
   return(
     <React.Fragment>
-      <div className="alert alert-primary mt-3 alert-link" role="alert">
-          {props.text}
-      </div>
+
+      <nav className="navbar navbar-light" style={{"backgroundColor":"#e3f2fd","padding":"10px","marginBottom":"10px"}}>
+          <b>* {props.text}</b>
+          {props.icon}
+      </nav>
+    
     </React.Fragment>
   )
 }

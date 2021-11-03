@@ -1,51 +1,50 @@
-import React from 'react';
-import { Link } from "react-router-dom";
-import Menu from '../../components/Menu/Index';
-import Header from '../../components/Header/Index';
+import React, { useRef, useState, useEffect } from 'react';
 
-function Clientes(){
-  return(
-    <React.Fragment>
-      <Menu />
 
-      <main className="content">
-        <Header text="Clientes" />
-        
-        <div style={{"padding":"5px"}}>
-          <button className="btn btn-secondary d-inline-flex align-items-center me-2 dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <svg className="icon icon-xs me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-            </svg>
-            Novo Cliente
-          </button>
-          <button className="btn btn-secondary d-inline-flex align-items-center me-2 dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <svg className="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd"></path>
-            </svg>
-            Pesquisar
-          </button>
-          <button>
-            <Link to="/client-list">
-              <clientList />
-            </Link>
-          </button>
-        </div>
+function ClientModal(){
 
-        <div className="row">
-          <div className="col-8 col-xl-12">
-            <div className="card card-body border-0 shadow mb-4">
-              <form>
+  const [isVisible, setIsVisible] = useState(false);
+  const btnClose = useRef('');
+
+  useEffect(() => {
+
+    const modal = document.getElementById('modalNewClient');
+    modal.addEventListener('hidden.bs.modal', (event) => {
+      setIsVisible(false);
+    })
+    modal.addEventListener('shown.bs.modal', (event) => {
+      setIsVisible(true);
+    })
+
+
+  },[])
+
+  
+  return (
+    <div className="modal fade" id="modalNewClient" tabIndex="-1" role="dialog" aria-labelledby="modalNewClient" aria-hidden="true">
+      <div className="modal-dialog modal-tertiary modal-dialog-centered modal-lg" role="document">
+        <div className="modal-content bg-dark text-white">
+          <div className="modal-header">
+              <p className="modal-title" id="modalTitleNotify">** NOVO CLIENTE **</p>
+              <button ref={btnClose} type="button" className="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+          </div>
+
+          <hr style={{"marginTop":"-6px"}} />
+
+          <form>
+            <div className="modal-body">
+              <div className="form-group">
                 <div className="row">
                   <div className="col-md-9 mb-3">
                     <div>
-                      <label for="nomecompleto">Nome Completo:</label>
+                      <label htmlFor="nomecompleto">Nome Completo:</label>
                       <input className="form-control" id="nomecompleto" type="text" placeholder="nome completo" required />
                     </div>
                   </div>
 
                   <div className="col-md-3 mb-3">
                     <div>
-                      <label for="naccliente">Nacionalidade:</label>
+                      <label htmlFor="naccliente">Nacionalidade:</label>
                       <input className="form-control" id="naccliente" type="text" placeholder="nacionalidade" required />
                     </div>
                   </div>
@@ -151,7 +150,7 @@ function Clientes(){
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="row">
                   <div className="col-sm-4 mb-3">
                     <div className="form-group">
@@ -201,7 +200,7 @@ function Clientes(){
                 </div>
 
                 <div clclassNames="row">
-                  <div className="card-body pb-5"> 
+                  <div class="d-flex justify-content-between">
                     <button className="btn btn-success me-2">
                       <svg className="icon icon-xs" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.707 10.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V6h5a2 2 0 012 2v7a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h5v5.586l-1.293-1.293zM9 4a1 1 0 012 0v2H9V4z"></path>
@@ -216,13 +215,14 @@ function Clientes(){
                     </button>
                   </div>
                 </div>
-              </form>
-            </div>            
-          </div>
+              </div>
+            </div>
+          </form>
         </div>
-      </main>
-    </React.Fragment>
+      </div>
+    </div>
   )
 }
 
-export default Clientes;
+
+export default ClientModal;

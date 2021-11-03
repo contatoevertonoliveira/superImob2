@@ -1,4 +1,0 @@
-export const CREATE_CLIENT = "CREATE_CLIENT";
-export const RETRIEVE_CLIENT = "RETRIEVE_CLIENT";
-export const UPDATE_CLIENT = "UPDATE_CLIENT";
-export const DELETE_CLIENT = "DELETE_CLIENT";
